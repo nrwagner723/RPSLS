@@ -19,5 +19,10 @@ class Human(Player):
         print('Enter [4] for Spock')
         sleep(0.2)
         self.num = int(input('\nChoose your gesture: '))
-        self.gesture = self.gesture_list[self.num]        
+        if (self.num == 0) or (self.num == 1) or (self.num == 2) or (self.num == 3) or (self.num == 4):
+            self.gesture = self.gesture_list[self.num]   
+        else:
+            print('Please enter a valid response')
+            self.num = int(input('\nChoose your gesture: '))
+            self.gesture = self.gesture_list[self.num]     
 
