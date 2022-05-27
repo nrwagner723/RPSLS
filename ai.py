@@ -7,5 +7,5 @@ class AI(Player):
         super().__init__()
         self.name = name
 
-    def randomize_gesture(self):
+    def choose_gesture(self):
         self.gesture = self.gesture_list[random.randint(0, 4)]

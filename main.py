@@ -13,3 +13,8 @@
 # player base class and an AI class
 # if theres 2 players, they each inherit from player base class which stores the logic for asking what gesture they want to pick
 # if theres a player and an AI the player inherits from player base class and and the ai is from separate class that randomizes gesture choice. 
+
+from game import Game
+
+game = Game()
+game.run_game()
