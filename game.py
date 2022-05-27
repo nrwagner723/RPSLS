@@ -44,34 +44,34 @@ class Game:
         # if self.number_of_players == 1:
             if self.player_one.gesture == self.player_two.gesture:
                 print(f'\n{self.player_one.name} chose {self.player_one.gesture}\n\n{self.player_two.name} chose {self.player_two.gesture}\n\nIt\'s a tie!\n\n\n')
-            elif self.player_one.gesture == 'Rock' and self.player_two.gesture == 'Lizard' or self.player_two.gesture == 'Scissors':
+            elif self.player_one.gesture == 'Rock' and ((self.player_two.gesture == 'Lizard') or (self.player_two.gesture == 'Scissors')):
                 print(f'\n{self.player_one.name} chose {self.player_one.gesture}\n\n{self.player_two.name} chose {self.player_two.gesture}\n\n{self.player_one.name} wins!\n\n\n')
                 self.player_one.wins += 1
-            elif self.player_one.gesture == 'Paper' and self.player_two.gesture == 'Rock' or self.player_two.gesture == 'Spock':
+            elif self.player_one.gesture == 'Paper' and ((self.player_two.gesture == 'Rock') or (self.player_two.gesture == 'Spock')):
                 print(f'\n{self.player_one.name} chose {self.player_one.gesture}\n\n{self.player_two.name} chose {self.player_two.gesture}\n\n{self.player_one.name} wins!\n\n\n')
                 self.player_one.wins += 1
-            elif self.player_one.gesture == 'Scissors' and self.player_two.gesture == 'Paper' or self.player_two.gesture == 'Lizard':
+            elif self.player_one.gesture == 'Scissors' and ((self.player_two.gesture == 'Paper') or (self.player_two.gesture == 'Lizard')):
                 print(f'\n{self.player_one.name} chose {self.player_one.gesture}\n\n{self.player_two.name} chose {self.player_two.gesture}\n\n{self.player_one.name} wins!\n\n\n')
                 self.player_one.wins += 1
-            elif self.player_one.gesture == 'Lizard' and self.player_two.gesture == 'Paper' or self.player_two.gesture == 'Spock':
+            elif self.player_one.gesture == 'Lizard' and ((self.player_two.gesture == 'Paper') or (self.player_two.gesture == 'Spock')):
                 print(f'\n{self.player_one.name} chose {self.player_one.gesture}\n\n{self.player_two.name} chose {self.player_two.gesture}\n\n{self.player_one.name} wins!\n\n\n')
                 self.player_one.wins += 1
-            elif self.player_one.gesture == 'Spock' and self.player_two.gesture == 'Scissors' or self.player_two.gesture == 'Rock':
+            elif self.player_one.gesture == 'Spock' and ((self.player_two.gesture == 'Scissors') or (self.player_two.gesture == 'Rock')):
                 print(f'\n{self.player_one.name} chose {self.player_one.gesture}\n\n{self.player_two.name} chose {self.player_two.gesture}\n\n{self.player_one.name} wins!\n\n\n')
                 self.player_one.wins += 1
-            elif self.player_two.gesture == 'Rock' and self.player_one.gesture == 'Lizard' or self.player_one.gesture == 'Scissors':
+            elif self.player_two.gesture == 'Rock' and ((self.player_one.gesture == 'Lizard') or (self.player_one.gesture == 'Scissors')):
                 print(f'\n{self.player_one.name} chose {self.player_one.gesture}\n\n{self.player_two.name} chose {self.player_two.gesture}\n\n{self.player_two.name} wins!\n\n\n') 
                 self.player_two.wins += 1
-            elif self.player_two.gesture == 'Paper' and self.player_one.gesture == 'Rock' or self.player_one.gesture == 'Spock':
+            elif self.player_two.gesture == 'Paper' and ((self.player_one.gesture == 'Rock') or (self.player_one.gesture == 'Spock')):
                 print(f'\n{self.player_one.name} chose {self.player_one.gesture}\n\n{self.player_two.name} chose {self.player_two.gesture}\n\n{self.player_two.name} wins!\n\n\n') 
                 self.player_two.wins += 1
-            elif self.player_two.gesture == 'Scissors' and self.player_one.gesture == 'Paper' or self.player_one.gesture == 'Lizard':
+            elif self.player_two.gesture == 'Scissors' and ((self.player_one.gesture == 'Paper') or (self.player_one.gesture == 'Lizard')):
                 print(f'\n{self.player_one.name} chose {self.player_one.gesture}\n\n{self.player_two.name} chose {self.player_two.gesture}\n\n{self.player_two.name} wins!\n\n\n') 
                 self.player_two.wins += 1
-            elif self.player_two.gesture == 'Lizard' and self.player_one.gesture == 'Paper' or self.player_one.gesture == 'Spock':
+            elif self.player_two.gesture == 'Lizard' and ((self.player_one.gesture == 'Paper') or (self.player_one.gesture == 'Spock')):
                 print(f'\n{self.player_one.name} chose {self.player_one.gesture}\n\n{self.player_two.name} chose {self.player_two.gesture}\n\n{self.player_two.name} wins!\n\n\n') 
                 self.player_two.wins += 1
-            elif self.player_two.gesture == 'Spock' and self.player_one.gesture == 'Scissors' or self.player_one.gesture == 'Rock':
+            elif self.player_two.gesture == 'Spock' and ((self.player_one.gesture == 'Scissors') or (self.player_one.gesture == 'Rock')):
                 print(f'\n{self.player_one.name} chose {self.player_one.gesture}\n\n{self.player_two.name} chose {self.player_two.gesture}\n\n{self.player_two.name} wins!\n\n\n') 
                 self.player_two.wins += 1
 
