@@ -6,7 +6,7 @@ class Game:
 
     def __init__(self):
         self.player_one = Human('Natalie')
-        self.player_two = AI()
+        self.player_two = AI('Bot')
 
     def display_rules(self):
         print('\nWelcome to Rock Paper Scissors Lizard Spock\n\nYou have to win 2 out of 3 rounds to win the game\nUse the number keys to enter your choices')
@@ -35,8 +35,7 @@ class Game:
 
     def how_many_humans(self):
         number_of_players = input('\nHow many players? Enter [1], [2], or [3] for a surprise: ')
-        self.players = number_of_players
-
+        
     def run_game(self):
         self.display_rules()
         self.how_many_humans()

@@ -19,6 +19,3 @@ class Human(Player):
         print('Enter [4] for Spock')
         sleep(0.2)
         self.gesture = int(input('\nChoose your gesture: '))
-
-pla = Human('natalie')
-pla.choose_gesture()
