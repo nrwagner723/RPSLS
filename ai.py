@@ -9,4 +9,3 @@ class AI(Player):
 
     def randomize_gesture(self):
         self.gesture = self.gesture_list[random.randint(0, 4)]
-        print(self.gesture)

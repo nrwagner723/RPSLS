@@ -34,8 +34,16 @@ class Game:
         print('Rock crushes Scissors')
 
     def how_many_humans(self):
-        number_of_players = input('\nHow many players? Enter [1], [2], or [3] for a surprise: ')
-        
+        self.number_of_players = int(input('\nHow many players? Enter [1], [2], or [3] for a surprise: '))
+
+
+    def play(self):
+        if self.number_of_players == 1:
+            if self.player_one.gesture == self.player_two.gesture:
+                print(f'{self.player_one.name} chose {self.player_one.gesture}\n{self.player_two.name} chose {self.player_two.gesture}\nIt\'s a tie!')
+            elif self.player_one.gesture == 'Rock' and self.player_two.gesture == 'Paper':
+                print(f'{self.player_one.name} chose {self.player_one.gesture}\n{self.player_two.name} chose {self.player_two.gesture}\n{self.player_two.name} wins!')
+
     def run_game(self):
         self.display_rules()
         self.how_many_humans()
