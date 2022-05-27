@@ -1,9 +1,12 @@
 from time import sleep
+from human import Human
+from ai import AI
 
 class Game:
 
     def __init__(self):
-        pass
+        self.player_one = Human('Natalie')
+        self.player_two = AI()
 
     def display_rules(self):
         print('\nWelcome to Rock Paper Scissors Lizard Spock\n\nYou have to win 2 out of 3 rounds to win the game\nUse the number keys to enter your choices')
@@ -34,24 +37,7 @@ class Game:
         number_of_players = input('\nHow many players? Enter [1], [2], or [3] for a surprise: ')
         self.players = number_of_players
 
-    def choose_gesture(self):
-        print('\nEnter [0] for Rock')
-        sleep(0.2)
-        print('Enter [1] for Paper')
-        sleep(0.2)
-        print('Enter [2] for Scissors')
-        sleep(0.2)
-        print('Enter [3] for Lizard')
-        sleep(0.2)
-        print('Enter [4] for Spock')
-        sleep(0.2)
-        gesture = input('\nChoose your gesture: ')
-        self.gesture = gesture
-
     def run_game(self):
         self.display_rules()
         self.how_many_humans()
-        self.choose_gesture()
 
-test = Game()
-test.run_game()
