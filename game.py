@@ -33,15 +33,18 @@ class Game:
         sleep(0.2)
         print('Rock crushes Scissors')
 
-    # def how_many_humans(self):
-        # self.number_of_players = int(input('\nHow many players? Enter [1], [2], or [3] for a surprise: '))
+    def how_many_humans(self):
+        self.number_of_players = int(input('\nHow many players? Enter [1] or [2]: '))
+        if self.number_of_players == 2:
+            self.player_two = Human('Mandy')
 
 
     def play(self):
         while self.player_one.wins < 2 and self.player_two.wins < 2:
+            print(f'\n{self.player_one.name}\'s turn:')
             self.player_one.choose_gesture()
+            print(f'\n{self.player_two.name}\'s turn:')
             self.player_two.choose_gesture()
-        # if self.number_of_players == 1:
             if self.player_one.gesture == self.player_two.gesture:
                 print(f'\n{self.player_one.name} chose {self.player_one.gesture}\n\n{self.player_two.name} chose {self.player_two.gesture}\n\nIt\'s a tie!\n\n\n')
             elif self.player_one.gesture == 'Rock' and ((self.player_two.gesture == 'Lizard') or (self.player_two.gesture == 'Scissors')):
@@ -83,7 +86,7 @@ class Game:
 
     def run_game(self):
         self.display_rules()
-        # self.how_many_humans()
+        self.how_many_humans()
         self.play()
         self.display_winner()
 
