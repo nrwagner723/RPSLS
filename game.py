@@ -1,12 +1,13 @@
 from time import sleep
 from human import Human
 from ai import AI
+import utils
 
 class Game:
 
     def __init__(self):
         self.player_one = Human('Natalie')
-        self.player_two = AI('Bot')
+        # self.player_two = AI('Bot')
 
     def display_rules(self):
         print('\nWelcome to Rock Paper Scissors Lizard Spock\n\nYou have to win 2 out of 3 rounds to win the game\nUse the number keys to enter your choices')
@@ -34,9 +35,13 @@ class Game:
         print('Rock crushes Scissors')
 
     def how_many_humans(self):
-        self.number_of_players = int(input('\nHow many players? Enter [1] or [2]: '))
+        self.number_of_players = utils.try_parse_int('\nHow many players? Enter [1] or [2]: ')
         if self.number_of_players == 2:
             self.player_two = Human('Mandy')
+        elif self.number_of_players == 1:
+            self.player_two = AI('Bot')
+        else: 
+            self.how_many_humans()
 
 
     def play(self):
